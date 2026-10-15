@@ -44,7 +44,7 @@ def _predictor():
             del sys.modules[m]
         from sam2.build_sam import build_sam2
         from sam2.sam2_image_predictor import SAM2ImagePredictor
-        device = "mps" if torch.backends.mps.is_available() else "cpu"
+        device = os.environ.get("SAM2_DEVICE") or ("mps" if torch.backends.mps.is_available() else "cpu")
         _pred = SAM2ImagePredictor(build_sam2(
             "configs/sam2.1/sam2.1_hiera_l", "checkpoints/sam2.1_hiera_large.pt", device=device))
         print("SAM2 loaded on", device, flush=True)
