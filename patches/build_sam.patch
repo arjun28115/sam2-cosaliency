@@ -1,0 +1,28 @@
+diff --git a/sam2/build_sam.py b/sam2/build_sam.py
+index 3a3bef1..8b83d83 100644
+--- a/sam2/build_sam.py
++++ b/sam2/build_sam.py
+@@ -22,14 +22,15 @@ if os.path.isdir(os.path.join(sam2.__path__[0], "sam2")):
+     # as "sam2" rather than importing the "sam2" python package (i.e. "sam2/sam2" directory).
+     # This typically happens because the user is running Python from the parent directory
+     # that contains the sam2 repo they cloned.
+-    raise RuntimeError(
+-        "You're likely running Python from the parent directory of the sam2 repository "
+-        "(i.e. the directory where https://github.com/facebookresearch/sam2 is cloned into). "
+-        "This is not supported since the `sam2` Python package could be shadowed by the "
+-        "repository name (the repository is also named `sam2` and contains the Python package "
+-        "in `sam2/sam2`). Please run Python from another directory (e.g. from the repo dir "
+-        "rather than its parent dir, or from your home directory) after installing SAM 2."
+-    )
++	pass  
++ # raise RuntimeError(
++    #    "You're likely running Python from the parent directory of the sam2 repository "
++     #   "(i.e. the directory where https://github.com/facebookresearch/sam2 is cloned into). "
++      #  "This is not supported since the `sam2` Python package could be shadowed by the "
++       # "repository name (the repository is also named `sam2` and contains the Python package "
++        #"in `sam2/sam2`). Please run Python from another directory (e.g. from the repo dir "
++        #"rather than its parent dir, or from your home directory) after installing SAM 2."
++   # )
+ 
+ 
+ HF_MODEL_ID_TO_FILENAMES = {

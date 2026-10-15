@@ -1,0 +1,12 @@
+# model weights / large data (not redistributable or too large for GitHub)
+*.pth
+*.pt
+checkpoints/
+data/
+reencode_cache*/
+*.npy
+*.npz
+# python / OS
+__pycache__/
+*.pyc
+.DS_Store
